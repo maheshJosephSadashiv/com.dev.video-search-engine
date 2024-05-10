@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTI-MEDIA</title>
+    <style>
+        .table-container {
+            display: flex;
+            justify-content: center;
+            font-family: Monospace,serif
+        }
+        table {
+            border-collapse: collapse;
+            width: 75%;
+        }
+        th, td {
+            padding: 10px; /* Adjust padding as needed */
+        }
+    </style>
+</head>
+<body>
+<div class="table-container">
+    <table border="1">
+        <tr>
+            <td>
+                <video id="myVideo" controls>
+                    <source src={{ url_for('static', filename=video_name) }} type="video/mp4">
+                </video>
+            </td>
+            <td>
+                <h4 align="left">STATISTICS</h4>
+                TIME TAKEN     : {{time_taken}} in seconds
+                <br>
+                VIDEO DETECTED : {{video_name}}
+                <br>
+                FRAME NUMBER   : {{frame_number}}
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="setCurTime()" type="button">RESET</button><br>
+            </td>
+            <td>
+                <form>
+                    <button type="submit" formaction="http://127.0.0.1:8000">Back</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<p></p>
+
+<script>
+    let vid = document.getElementById("myVideo");
+    vid.currentTime={{off_set_time}};
+    function setCurTime() {
+        vid.currentTime={{off_set_time}};
+    }
+</script>
+
+
+</body>
+</html>

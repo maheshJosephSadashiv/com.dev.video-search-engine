@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <style>
+        body {
+            justify-content: center;
+            font-family: Monospace,serif
+        }
+    </style>
+</head>
+<body>
+
+<h2>Submit Video</h2>
+
+<form action="{{url_for("index")}}" method="post">
+    <p>
+        Enter Video Location:
+        <input type="text" name="video">
+    </p>
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+</form>
+
+</body>
+</html>

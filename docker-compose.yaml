@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  postgres:
+    build:
+      context: ./postgres
+      dockerfile: postgres.Dockerfile
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+      - ./postgres/vector_extension.sql:/docker-entrypoint-initdb.d/0-vector_extension.sql
+#      - ./postgres/postgresql.conf:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+  pgweb:
+    container_name: pgweb
+    restart: always
+    image: sosedoff/pgweb
+    ports:
+      - "8081:8081"
+    links:
+      - postgres:postgres
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/postgres?sslmode=disable
+    depends_on:
+      - postgres
