@@ -8,7 +8,7 @@ The system works by pre-processing a database of videos to extract various visua
 The output of the system is an interactive media player that displays the matched video, starting at the frame corresponding to the query video.
 
 ## Key Features
-- **Robust Video Indexing**: The system uses a combination of shot boundaries, color, motion, and sound features to create a unique digital signature for each video in the database.
+- **Robust Video Indexing**: The system uses a combination of color, frequency coefficients, and sound features to create a unique digital signature for each video in the database.
 - **Efficient Matching**: A vector database is used to store the pre-computed video signatures, allowing for fast and accurate matching of the query video sub-signature.
 - **Interactive Media Player**: The final output is presented in a custom media player that allows users to play, pause, and reset the video, ensuring seamless playback of the matched content.
 - **Extensible Architecture**: The modular design of the system makes it easy to incorporate additional feature extraction techniques or switch to different vector database solutions in the future.
@@ -16,7 +16,7 @@ The output of the system is an interactive media player that displays the matche
 ## Architecture
 The project is structured into the following modules:
 
-- `preprocessing/`: Handles the extraction of visual and audio features from the video database and the generation of digital signatures.
+- `preprocessing/`: Handles the extraction of visual and audio features from the videos and the generation of digital signatures which is then stored in the form of an embedding.
 - `matching/`: Responsible for managing the vector database, performing the sub-signature matching, and identifying the best match.
 - `player/`: Implements the custom media player for displaying the output.
 - `utils/`: Provides utility functions and helper classes used across the project.
