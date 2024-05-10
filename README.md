@@ -22,6 +22,9 @@ The project is structured into the following modules:
 - `utils/`: Provides utility functions and helper classes used across the project.
 - `models/`: Defines the data models used throughout the project.
 
+![video_search_engine drawio](https://github.com/maheshJosephSadashiv/com.dev.video-search-engine/assets/38533715/84f481bb-351c-4545-8b34-94083062fa40)
+
+
 ## Dependencies
 
 - `brew reinstall ffmpeg`
