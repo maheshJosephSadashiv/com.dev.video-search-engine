@@ -1,4 +1,4 @@
-# SceneTrace - Video Search and Indexing
+# Video Search and Indexing
 
 ## Overview
 This project is a comprehensive solution for searching and indexing video content. It allows users to quickly find relevant videos and the exact timestamp within those videos, based on a short query video snippet.
