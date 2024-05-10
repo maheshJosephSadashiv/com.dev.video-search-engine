@@ -24,7 +24,29 @@ The project is structured into the following modules:
 
 ![video_search_engine drawio](https://github.com/maheshJosephSadashiv/com.dev.video-search-engine/assets/38533715/84f481bb-351c-4545-8b34-94083062fa40)
 
+Endpoint: /
 
+    Method: GET, POST
+    Description: This endpoint serves as the main entry point for the application. It renders either the index page or handles a POST request to search for a video file and display the results.
+
+Request Parameters
+
+    None
+
+Request Body
+
+    Method: POST
+        Parameter: video (string, required)
+            Description: The location of the video file to search for.
+
+Responses
+
+    200 OK
+        Description: The index page is rendered, or the search results are displayed.
+        Content: HTML content with the rendered page.
+    404 Not Found
+        Description: If the requested page or resource is not found.
+        Content: Error page.
 ## Dependencies
 
 - `brew reinstall ffmpeg`
