@@ -16,14 +16,16 @@ The output of the system is an interactive media player that displays the matche
 ## Architecture
 The project is structured into the following modules:
 
-- `preprocessing/`: Handles the extraction of visual and audio features from the videos and the generation of digital signatures which is then stored in the form of an embedding.
+- `preprocessing/`: Handles the extraction of visual and audio features from the videos and the generation of digital signatures which are then stored in the form of an embedding.
 - `matching/`: Responsible for managing the vector database, performing the sub-signature matching, and identifying the best match.
 - `player/`: Implements the custom media player for displaying the output.
 - `utils/`: Provides utility functions and helper classes used across the project.
 - `models/`: Defines the data models used throughout the project.
 
 ![video_search_engine drawio](https://github.com/maheshJosephSadashiv/com.dev.video-search-engine/assets/38533715/84f481bb-351c-4545-8b34-94083062fa40)
-
+results:
+BLUE: db video at the exact frame as query vid
+ORANGE: query video
 ## Endpoint: 
 
 /
@@ -53,6 +55,10 @@ Responses
 
 - `brew reinstall ffmpeg`
 - `pip install -r requirements.txt`
+## Analysis
+Computing the perceptual similarities with the query video and persisted video proved effective in searching. Here is a graph on the similarity index.
+<img width="1300" alt="similarity_index" src="https://github.com/maheshJosephSadashiv/com.dev.video-search-engine/assets/38533715/693600a0-5efd-4288-a9c5-5007ac0e64df">
+
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
