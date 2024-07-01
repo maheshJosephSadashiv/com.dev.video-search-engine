@@ -60,8 +60,7 @@ Computing the perceptual similarities with the query video and persisted video p
 <img width="1300" alt="similarity_index" src="https://github.com/maheshJosephSadashiv/com.dev.video-search-engine/assets/38533715/693600a0-5efd-4288-a9c5-5007ac0e64df">
 
 ## Demo
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/yh6ETUFDFsM?si=wskHKFkw-q8EEyqn)
+[![IMAGE ALT TEXT](https://www.notta.ai/pictures/translate-youtube-video-cover.png)](http://www.youtube.com/watch?v=yh6ETUFDFsM&ab_channel=MaheshSadashiv "Video Search Engine")
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
